@@ -1,0 +1,11 @@
+
+{% extends 'base.html' %}{% block content %}
+<div class="card pop">
+<h2>Staff Dashboard (Live Occupancy)</h2>
+<p>Total Slots: {{ total }}</p>
+<p>Occupied: {{ occupied }}</p>
+<p>Free: {{ free }}</p>
+<a class="btn" href="/staff/scanner/">Open Scanner</a>
+</div>
+<script>setTimeout(()=>location.reload(),5000);</script>
+{% endblock %}

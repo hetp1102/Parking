@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}{% block content %}
+<div class="card pop">
+<h2>User Dashboard</h2>
+{% if message %}<p>{{ message }}</p>{% endif %}
+<h3>Book a Slot</h3>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button class="btn">Book & Generate QR</button></form>
+<h3>Your Active Bookings (QR)</h3>
+<ul>
+{% for b in bookings %}
+<li>
+Slot {{ b.slot.number }} |
+Code: <b>{{ b.code }}</b><br>
+{% if b.qr_image %}
+<img src="{{ b.qr_image.url }}" width="150">
+{% endif %}
+</li>
+{% empty %}<li>No active bookings</li>{% endfor %}
+</ul>
+</div>
+{% endblock %}

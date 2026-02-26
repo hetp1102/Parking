@@ -1,0 +1,18 @@
+
+body{margin:0;font-family:Segoe UI;background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);color:#fff}
+.nav{display:flex;justify-content:space-between;padding:15px;background:rgba(0,0,0,.5)}
+.nav a{color:#fff;margin-left:10px;text-decoration:none;transition:.3s}
+.nav a:hover{color:#00c6ff}
+.container{padding:30px;max-width:900px;margin:auto}
+.card{background:rgba(255,255,255,.1);padding:25px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.3);transition:.4s}
+.card:hover{transform:translateY(-5px) scale(1.01)}
+.hero{text-align:center;padding:60px}
+.btn{display:inline-block;padding:8px 14px;border-radius:10px;background:#00c6ff;color:#000;text-decoration:none;border:none;margin-top:10px;transition:.3s}
+.btn:hover{transform:scale(1.05)}
+input,select,button{width:100%;padding:10px;border-radius:8px;border:none;margin-bottom:10px}
+.fade-in{animation:fade 1s}
+.slide-up{animation:slide .8s}
+.pop{animation:pop .6s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes slide{from{transform:translateY(20px);opacity:0}to{transform:none;opacity:1}}
+@keyframes pop{0%{transform:scale(.9);opacity:0}100%{transform:scale(1);opacity:1}}
